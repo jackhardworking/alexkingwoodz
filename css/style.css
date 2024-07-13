@@ -28,8 +28,8 @@ header h1 {
     position: relative;
     text-align: center;
     padding: 20px;
-    background: url('images/mainbackground.jpg') no-repeat center center;
-    background-size: cover;
+    background: url('/images/mainbackground.jpg')no-repeat center center;
+    background-size:cover ;
 }
 
 #video-section h2 {
@@ -112,9 +112,9 @@ header h1 {
     position: relative;
     padding: 40px 20px;
     color: #ffffff;
-    background: url('images/landscape.jpg') no-repeat center center;
+    background: url('/images/landscape.jpg') no-repeat center center;
     background-size: cover;
-    z-index: 0; /* 确保背景不覆盖内容 */
+    z-index: 0;/* 确保背景不覆盖内容 */
 }
 
 #offer-section::before {
@@ -130,7 +130,7 @@ header h1 {
 
 #offer-section h2, #offer-section .highlight, #offer-section button {
     position: relative;
-    z-index: 1; /* 确保内容在背景层之上 */
+    z-index: 1;/* 确保内容在背景层之上 */
 }
 
 #offer-section h2 {
@@ -187,32 +187,29 @@ header h1 {
 
 .map-title h1 {
     text-align: center;
-    font-size: 40px; 
-    font-weight: 500; 
-    color: #222; 
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-template-rows: 27px 0;
-    grid-gap: 20px;
-    align-items: center;
-}
-
-.map-title h1:after, .map-title h1:before {
+        font-size:40px; font-weight:500; color:#222; letter-spacing:1px;
+        text-transform: uppercase;
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-template-rows: 27px 0;
+        grid-gap: 20px;
+        align-items: center;
+    }
+    
+.map-title h1:after,.map-title h1:before {
     content: " ";
     display: block;
     border-bottom: 1px solid #c50000;
     border-top: 1px solid #c50000;
     height: 5px;
-    background-color: #f8f8f8;
+    background-color:#f8f8f8;
 }
 
 /* 地图样式 */
 #location-section {
     text-align: center;
     padding: 40px 20px;
-    background: url('images/mapbackground.jpg') no-repeat center center;
+    background: url('/images/mapbackground.jpg') no-repeat center center;
     background-size: cover;
     position: relative;
 }
