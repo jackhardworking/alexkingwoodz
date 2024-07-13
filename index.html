@@ -1,0 +1,88 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bukit Jalil 最火红的项目</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Bukit Jalil 最火红的项目</h1>
+        <h3>由知名发展商 EXSIM 打造的完美项目</h3>
+    </header>
+    <section id="video-section">
+        <h2>来听听买家对<b>Kingwoodz</b>的反馈！</h2>
+        <div class="video-wrapper">
+            <video src="/videos/intro.mp4" controls autoplay muted></video>
+        </div>
+    </section>
+    <section id="form-section" class="gray-section">
+        <form action="/download" method="post">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <button type="submit">免费领取E-book</button>
+        </form>
+        <button class="whatsapp-button" onclick="window.location.href='https://wa.me/60163482827'">
+            <img src="/images/whatsapp.png" alt="WhatsApp"> Whatsapp Me！
+        </button>
+    </section>
+    <section id="offer-section" class="white-section">
+        <h2><span class="highlight">70%<br></span> 单位已经卖出，现在购买将获得价值58000令吉的家具！</h2>
+        <button class="whatsapp-button" onclick="window.location.href='https://wa.me/60163482827'">
+            <img src="/images/whatsapp.png" alt="WhatsApp"> Whatsapp Me！
+        </button>
+    </section>
+    <section id="second-form-section" class="gray-section">
+        <form action="/download" method="post">
+            <input type="text" name="name" placeholder="姓名" required>
+            <input type="email" name="email" placeholder="电子邮件" required>
+            <input type="tel" name="phone" placeholder="电话号码" required>
+            <button type="submit">立即获取免费 E-Book ！</button>
+        </form>
+    </section>
+    <section id="location-section" class="white-section">
+        <div class="map-title">
+            <h1>项目地点就在这里</h1>
+        </div>
+        <div id="map-wrapper">
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.134425615319!2d101.67002697497078!3d3.058691346917066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4bbbd72836dd%3A0x1ce5f64d5018a9ec!2sThe%20Kingswoodz%20%40%20Bukit%20Jalil!5e0!3m2!1szh-CN!2smy!4v1720786030218!5m2!1szh-CN!2smy" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map-title">
+        <h2>为什么选择这个项目？</h2></div>
+        <p>
+            1. 步行到 Pavilion Bukit Jalil 和 Awam Besar<br>
+            2. 我们拥有一房，二房 和 三房供您选择 ！<br>
+            3. 唯一一个拥有私人通道，直达店面的项目
+        </p>
+    </section>
+    <section id="render-images" class="gray-section">
+        <h2>Gallery</h2>
+        <img src="/images/gallery1.jpg" alt="渲染图1">
+        <img src="/images/gallery2.jpg" alt="渲染图2">
+        <img src="/images/gallery3.jpg" alt="渲染图3">
+        <img src="/images/gallery4.jpg" alt="渲染图4">
+        <img src="/images/gallery5.jpg" alt="渲染图5">
+        <img src="/images/gallery6.jpg" alt="渲染图6">
+    </section>
+    <footer>
+        <p>My Social Media</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/lim.daichi" target="_blank">
+                <img src="/images/facebook.png" alt="Facebook"> Facebook
+            </a>
+            <a href="https://instagram.com/_jjlim_/" target="_blank">
+                <img src="/images/instagram.png" alt="Instagram"> Instagram
+            </a>
+        </div>
+        <p>&copy; 2024 Alex. All rights reserved.</p>
+    </footer>
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

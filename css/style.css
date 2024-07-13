@@ -1,0 +1,366 @@
+/* 全局样式 */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    overflow-x: hidden; 
+    font-size: 18px;
+}
+
+/* 标题样式 */
+header {
+    background: #000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* 视频部分样式 */
+#video-section {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    background: url('/images/mainbackground.jpg')no-repeat center center;
+    background-size:cover ;
+}
+
+#video-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+}
+
+/* 表单样式 */
+.gray-section {
+    background: #e0e0e0;
+    padding: 40px 20px;
+}
+
+.white-section {
+    background: #ffffff;
+    padding: 40px 20px;
+}
+
+#form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-section form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    width: 45%;
+}
+
+#form-section input, #form-section button {
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+#form-section button {
+    background: #000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.whatsapp-button {
+    background: #25d366;
+    color: #ffffff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-button img {
+    margin-right: 10px;
+    height: 1em;
+}
+
+/* 特效部分样式 */
+#offer-section {
+    text-align: center;
+    position: relative;
+    padding: 40px 20px;
+    color: #ffffff;
+    background: url('/images/landscape.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: 0;/* 确保背景不覆盖内容 */
+}
+
+#offer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1; /* 确保背景层在内容层之下 */
+}
+
+#offer-section h2, #offer-section .highlight, #offer-section button {
+    position: relative;
+    z-index: 1;/* 确保内容在背景层之上 */
+}
+
+#offer-section h2 {
+    font-size: 3em;
+    margin: 20px 0;
+}
+
+#offer-section .highlight {
+    font-size: 4em;
+}
+
+#offer-section button {
+    background: #25d366;
+    color: #ffffff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+#offer-section button:hover {
+    background: #1ebc61;
+}
+
+/* 第二表单样式 */
+#second-form-section {
+    text-align: center;
+}
+
+#second-form-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#second-form-section input, #second-form-section button {
+    width: 80%;
+    max-width: 400px;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+#second-form-section button {
+    background: #333;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.map-title h1 {
+    text-align: center;
+        font-size:40px; font-weight:500; color:#222; letter-spacing:1px;
+        text-transform: uppercase;
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-template-rows: 27px 0;
+        grid-gap: 20px;
+        align-items: center;
+    }
+    
+.map-title h1:after,.map-title h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #c50000;
+    border-top: 1px solid #c50000;
+    height: 5px;
+    background-color:#f8f8f8;
+}
+
+/* 地图样式 */
+#location-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: url('/images/mapbackground.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+#location-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px
+}
+
+#map-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* 渲染图样式 */
+#render-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* 减小间距 */
+    padding: 20px;
+}
+
+#render-images h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#render-images h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: #333;
+    margin: 10px auto;
+}
+
+#render-images img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.9;
+}
+
+#render-images img:hover {
+    opacity: 1;
+}
+
+/* 页脚样式 */
+footer {
+    background: #000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 增加间距 */
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a img {
+    margin-right: 5px;
+    height: 1em;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+/* 移动下载按钮样式 */
+.download-button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: #ff8913;
+    color: #ffffff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 1.2em;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* 移动端样式修复 */
+@media (max-width: 768px) {
+    #form-section form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #form-section input, #form-section button {
+        font-size: 1em;
+    }
+
+    #offer-section h2 .highlight {
+        display: inline-block;
+        width: 100%;
+        font-size: 2em; /* 在小屏幕上调整字体大小 */
+    }
+
+    #offer-section h2 {
+        font-size: 2em; /* 在小屏幕上调整字体大小 */
+    }
+}
