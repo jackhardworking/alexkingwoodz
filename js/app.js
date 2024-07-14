@@ -64,4 +64,39 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "power1.inOut",
         repeatDelay: 0.5
     });
+
+    // 表单提交处理
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // 阻止表单默认提交行为
+
+            const formData = new FormData(form);
+
+            fetch('submit.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    // 表单提交成功，下载 PDF 文件
+                    alert('表单提交成功！');
+                    const url = 'tryme.pdf'; // PDF 文件的路径
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = url;
+                    a.download = 'tryme.pdf';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                } else {
+                    alert('表单提交失败，请重试。');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('提交过程中发生错误，请重试。');
+            });
+        });
+    });
 });
