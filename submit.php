@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 $server = "localhost";
 $username = "id22357213_shirobai";
 $password = "Csc@101012";
@@ -13,9 +16,9 @@ if ($conn->connect_error) {
 }
 
 // 获取表单数据
-$name = $_POST['name'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
+$name = $_POST['name'] ?? '';
+$email = $_POST['email'] ?? '';
+$phone = $_POST['phone'] ?? '';
 
 // 数据验证
 if (strlen($name) > 255) {
